@@ -1,0 +1,21 @@
+project: action-tests
+
+environment:
+  GOHOME: /home/go
+  GOPATH: $GOHOME
+  PROJECT_PATH: $GOHOME/src/github.com/SimonRichardson/action-tests
+  LANG: "C.UTF-8"
+  LANGUAGE: "en"
+
+backends:
+  lxd:
+    systems: [ubuntu-16.04]
+
+suites:
+  examples/:
+    summary: Simple examples
+
+path: /home/go/src/github.com/SimonRichardson/action-tests
+
+exclude:
+  - .git
